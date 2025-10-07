@@ -124,7 +124,8 @@ nav {
 /* Герой секция */
 .hero {
     height: 100vh;
-   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/level-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    display: flex;
     align-items: center;
     text-align: center;
     padding-top: 80px;
@@ -874,5 +875,4 @@ html {
     .about-text h3, .contact-info h3, .contact-form h3 {
         font-size: 1.3rem;
     }
-
 }
