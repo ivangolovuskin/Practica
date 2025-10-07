@@ -1,0 +1,501 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фитнес-клуб "Гараж" - Тренировки нового уровня</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Main.css">
+    <link rel="icon" href="1.png" type="image/png" sizes="64x64">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Шапка с навигацией -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><img src="garazh_novy_logo1.png" alt="Логотип Гараж" style="height: 40px;"></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О клубе</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#trainers">Тренеры</a></li>
+                    <li><a href="#pricing">Цены</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <button class="cta-button" data-bs-toggle="modal" data-bs-target="#registrationModal">Записаться</button>
+                <button class="mobile-menu-button" id="mobileMenuButton">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-menu-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О клубе</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#trainers">Тренеры</a></li>
+                <li><a href="#pricing">Цены</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><button class="cta-button" data-bs-toggle="modal" data-bs-target="#registrationModal">Записаться</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Модальное окно записи -->
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registrationModalLabel">Запись на тренировку</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-control" id="name" name="name" required 
+                                pattern="[А-Яа-яЁёA-Za-z\s]+" title="Только буквы разрешены">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required 
+                                pattern="[\+0-9]{11,}" title="Пожалуйста, введите корректный номер телефона (не менее 11 цифр)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Услуга</label>
+                            <select class="form-select" id="service" name="service" required>
+                                <option value="" selected disabled>Выберите услугу</option>
+                                <option value="Силовые тренировки">Силовые тренировки</option>
+                                <option value="Функциональный тренинг">Функциональный тренинг</option>
+                                <option value="Кардио программы">Кардио программы</option>
+                                <option value="Персональные тренировки">Персональные тренировки</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-lg">Отправить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Модальное2 -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Успешная запись</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="fas fa-check-circle text-success mb-3" style="font-size: 4rem;"></i>
+                    <h4>Спасибо за вашу заявку!</h4>
+                    <p>Мы свяжемся с вами в ближайшее время для подтверждения записи.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Герой секция -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>ТВОЙ НОВЫЙ УРОВЕНЬ ФИЗИЧЕСКОЙ ФОРМЫ</h1>
+                <p>Профессиональные тренеры, современное оборудование и индивидуальный подход к каждому клиенту</p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="cta-button">Выбрать абонемент</a>
+                    <button class="secondary-button" data-bs-toggle="modal" data-bs-target="#registrationModal">Бесплатная тренировка</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О клубе -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">О НАШЕМ <span>КЛУБЕ</span></h2>
+            <div class="about-content">
+                <div class="about-text fade-in delay-1">
+                    <h3>Гараж - это не просто фитнес-клуб</h3>
+                    <p>Мы создали пространство, где каждый может раскрыть свой потенциал, независимо от уровня подготовки. Наш клуб сочетает в себе профессиональный подход и домашнюю атмосферу.</p>
+                    <p>Современное оборудование, просторные залы и индивидуальный подход к каждому клиенту - вот что делает "Гараж" уникальным местом для тренировок.</p>
+                    <p>Наша миссия - помочь вам достичь своих целей в фитнесе и поддерживать здоровый образ жизни.</p>
+                    <button class="cta-button" data-bs-toggle="modal" data-bs-target="#registrationModal">Записаться</button>
+                </div>
+                <div class="about-image fade-in delay-2">
+                    <img src="Screenshot_2.jpg" alt="Фитнес клуб Гараж" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title fade-in">НАШИ <span>УСЛУГИ</span></h2>
+            <div class="services-carousel">
+                <div class="services-slides-container">
+                    <div class="services-slides">
+                        <!--  1 -->
+                        <div class="service-slide">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-dumbbell"></i>
+                                </div>
+                                <h3>Силовые тренировки</h3>
+                                <p>Индивидуальные и групповые программы для развития силы и выносливости под руководством опытных тренеров.</p>
+                                <a class="service-button" href="Service.html">Подробнее</a>
+                            </div>
+                        </div>
+                        
+                        <!--  2  -->
+                        <div class="service-slide active">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-running"></i>
+                                </div>
+                                <h3>Функциональный тренинг</h3>
+                                <p>Тренировки, направленные на развитие всех физических качеств: силы, выносливости, гибкости и координации.</p>
+                                <a class="service-button" href="Service.html">Подробнее</a>
+                            </div>
+                        </div>
+                        
+                        <!--  3 -->
+                        <div class="service-slide">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <h3>Кардио программы</h3>
+                                <p>Эффективные тренировки для улучшения работы сердечно-сосудистой системы и снижения веса.</p>
+                                <a class="service-button" href="Service.html">Подробнее</a>
+                            </div>
+                        </div>
+                        
+                        <!--  4 -->
+                        <div class="service-slide">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <h3>Персональные тренировки</h3>
+                                <p>Индивидуальный подход к каждому клиенту с учетом его целей, уровня подготовки и физических особенностей.</p>
+                                <a class="service-button" href="Service.html">Подробнее</a>
+                            </div>
+                        </div>
+                        
+                        <!--  5 -->
+                        <div class="service-slide">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-child"></i>
+                                </div>
+                                <h3>Детский фитнес</h3>
+                                <p>Специальные программы для детей, направленные на гармоничное физическое развитие и формирование здоровых привычек.</p>
+                                <a class="service-button" href="Service.html">Подробнее</a>
+                            </div>
+                        </div>
+                        
+                        <!--  6 -->
+                        <div class="service-slide">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <h3>Магазин спортивного питания</h3>
+                                <p>Всё для продуктивного фитнеса в одном месте!</p>
+                                <a class="service-button" href="Service.html">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <!--  7 -->
+                        <div class="service-slide">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-bell-concierge"></i>
+                                </div>
+                                <h3>Гостиница</h3>
+                                <p>Современный гостиничный комплекс, предлагающий комфортные условия проживания в течение любого срока.</p>
+                                <a class="service-button" href="Service.html">Подробнее</a>
+                            </div>
+                        </div>
+                        
+                        <!--  8 -->
+                        <div class="service-slide">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+                                </div>
+                                <h3>Питание</h3>
+                                <p>Разработка индивидуальных программ питания для достижения ваших целей: снижение веса, набор массы или поддержание формы.</p>
+                                <a class="service-button" href="Service.html">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="carousel-dots">
+                    <div class="carousel-dot" data-slide="0"></div>
+                    <div class="carousel-dot active" data-slide="1"></div>
+                    <div class="carousel-dot" data-slide="2"></div>
+                    <div class="carousel-dot" data-slide="3"></div>
+                    <div class="carousel-dot" data-slide="4"></div>
+                    <div class="carousel-dot" data-slide="5"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тренеры -->
+    <section class="trainers" id="trainers">
+        <div class="container">
+            <h2 class="section-title fade-in">НАШИ <span>ТРЕНЕРЫ</span></h2>
+            <div class="trainers-grid">
+                <div class="trainer-card fade-in">
+                    <div class="trainer-image">
+                        <img src="https://garage-sport.ru/wp-content/uploads/2024/05/Мартьянов.jpg" alt="Тренер Даниил" loading="lazy">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Мартьянов Данил</h3>
+                        <p>Силовые тренировки</p>
+                        <p>Опыт работы: 6 лет</p>
+                        <a class="trainer-button" href="Teacher_Daniil.html">Записаться</a>
+                    </div>
+                </div>
+                <div class="trainer-card fade-in delay-1">
+                    <div class="trainer-image">
+                        <img src="https://garage-sport.ru/wp-content/uploads/2021/10/Клименкова-Марина.jpg" alt="Тренер Мария" loading="lazy">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Клименкова Марина</h3>
+                        <p>Функциональный тренинг</p>
+                        <p>Опыт работы: 5 лет</p>
+                        <a class="trainer-button" href="Teacher_Marina.html">Записаться</a>
+                    </div>
+                </div>
+                <div class="trainer-card fade-in delay-2">
+                    <div class="trainer-image">
+                        <img src="https://garage-sport.ru/wp-content/uploads/2022/01/Петрушин.jpg" alt="Тренер Андрей" loading="lazy">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Петрушин Андрей</h3>
+                        <p>Силовой  тренинг</p>
+                        <p>Опыт работы: с 2012 года</p>
+                        <a class="trainer-button" href="Teacher_Andrey.html">Записаться</a>
+                    </div>
+                </div>
+                <div class="trainer-card fade-in">
+                    <div class="trainer-image">
+                        <img src="https://garage-sport.ru/wp-content/uploads/2023/02/sdas.jpg" alt="Тренер Татьяна" loading="lazy">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Татьяна Корявина</h3>
+                        <p>Танцевальные направления</p>
+                        <p>Опыт работы: с 2017 года</p>
+                        <a class="trainer-button" href="Teacher_Tatyana .html">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цены -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title fade-in">НАШИ <span>ЦЕНЫ</span></h2>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <h3>Разовое посещение</h3>
+                    <div class="price">800 <span>рублей</span></div>
+                    <ul class="pricing-features">
+                        <li>1 тренировка</li>
+                        <li>Доступ ко всем зонам клуба</li>
+                        <li>Консультация тренера</li>
+                    </ul>
+                    <button class="pricing-button" data-bs-toggle="modal" data-bs-target="#registrationModal">Купить</button>
+                </div>
+                <div class="pricing-card popular fade-in delay-1">
+                    <div class="popular-label">ПОПУЛЯРНЫЙ</div>
+                    <h3>Месячный абонемент</h3>
+                    <div class="price">5000 <span>рублей</span></div>
+                    <ul class="pricing-features">
+                        <li>Неограниченное количество тренировок</li>
+                        <li>Доступ ко всем зонам клуба</li>
+                        <li>2 персональные тренировки</li>
+                        <li>Составление плана питания</li>
+                    </ul>
+                    <button class="pricing-button" data-bs-toggle="modal" data-bs-target="#registrationModal">Купить</button>
+                </div>
+                <div class="pricing-card fade-in delay-2">
+                    <h3>Годовой абонемент</h3>
+                    <div class="price">45000 <span>рублей</span></div>
+                    <ul class="pricing-features">
+                        <li>Неограниченное количество тренировок</li>
+                        <li>Доступ ко всем зонам клуба</li>
+                        <li>12 персональных тренировок</li>
+                        <li>Индивидуальный план питания</li>
+                        <li>Заморозка на 1 месяц</li>
+                    </ul>
+                    <button class="pricing-button" data-bs-toggle="modal" data-bs-target="#registrationModal">Купить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">НАШИ <span>КОНТАКТЫ</span></h2>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h3>Свяжитесь с нами</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <p>ул. 8 Марта, 24-б, Красноярск,</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <p>+7 391 2-900-007</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <p>garage-sport@mail.ru</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <p>Пн-Пт: 7:00 - 23:00<br>Сб-Вс: 9:00 - 21:00</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://vk.com/garagesportru" aria-label="ВКонтакте"><i class="fab fa-vk fa-2x"></i></a>
+                        <a href="https://t.me/garageforyou24" aria-label="Telegram"><i class="fab fa-telegram fa-2x"></i></a>
+                        <a href="https://wa.me/+79504060400?text=Обращение+из+Яндекс+Карт%0AЗдравствуйте!+Меня+заинтересовало+ваше+предложение" aria-label="WhatsApp"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map fade-in delay-1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d788.2603884751954!2d92.81135227003271!3d56.026689305291946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7adc8868409b1%3A0xeab7775e6a8e5b15!2z0JPQkNCg0JDQlg!5e0!3m2!1sru!2sru!4v1750256083802!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo"><img src="garazh_novy_logo1.png" alt="Логотип Гараж" style="height: 30px;"></div>
+            <ul class="footer-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О клубе</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#trainers">Тренеры</a></li>
+                <li><a href="#pricing">Цены</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="social-links-footer">
+                <a href="https://vk.com/garagesportru" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/garageforyou24" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://wa.me/+79504060400?text=Обращение+из+Яндекс+Карт%0AЗдравствуйте!+Меня+заинтересовало+ваше+предложение" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="copyright">© 2025 Фитнес-клуб "Гараж". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Мобильное меню
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+
+        // Карусель услуг 
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelector('.services-slides');
+            const slideItems = document.querySelectorAll('.service-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            let currentSlide = 0; 
+            let autoScroll;
+
+            // обновление карусели
+            function updateCarousel() {
+                slides.style.transform = `translateX(${-currentSlide * 33.333}%)`;
+                
+                slideItems.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === currentSlide);
+                    slide.style.display = window.innerWidth <= 768 && i !== currentSlide ? 'none' : 'block';
+                });
+                
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
+            }
+
+            // карусель точки
+            function goToSlide(index) {
+                currentSlide = (index + slideItems.length) % slideItems.length;
+                updateCarousel();
+                resetAutoScroll();
+            }
+
+            function nextSlide() { goToSlide(currentSlide + 1); }
+            function prevSlide() { goToSlide(currentSlide - 1); }
+
+            // прокрут карусели
+            function resetAutoScroll() {
+                clearInterval(autoScroll);
+                autoScroll = setInterval(nextSlide, 2500);
+            }
+
+            // клики по карусели
+            document.querySelector('.carousel-prev').addEventListener('click', prevSlide);
+            document.querySelector('.carousel-next').addEventListener('click', nextSlide);
+            
+            dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
+            
+            document.querySelector('.services-slides-container').addEventListener('mouseenter', () => clearInterval(autoScroll));
+            document.querySelector('.services-slides-container').addEventListener('mouseleave', resetAutoScroll);
+            
+            window.addEventListener('resize', updateCarousel);
+            
+            // Обновление карусели
+            updateCarousel();
+            resetAutoScroll();
+
+            // Заявка
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+               
+                
+                // Закрытие модального
+                var registrationModal = bootstrap.Modal.getInstance(document.getElementById('registrationModal'));
+                registrationModal.hide();
+                
+                // Модальное успех
+                var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+            });
+        });
+    </script>
+    <!-- Кнопка "Наверх" -->
+    <a href="#home" class="back-to-top" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</body>
+</html>
