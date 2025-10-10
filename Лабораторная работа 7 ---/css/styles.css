@@ -1,0 +1,400 @@
+/* Основные стили */
+body {
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 60px;
+}
+
+/* Шапка */
+header {
+    transition: all 0.3s ease;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #d33;
+}
+
+.nav-link.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background-color: #d33;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-input {
+    border-radius: 20px;
+    padding-left: 15px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    width: 250px;
+}
+
+.search-btn {
+    border-radius: 20px;
+    margin-left: -10px;
+}
+
+/* Карточки блюд */
+.dish-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.dish-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dish-card.large {
+    height: 600px;
+}
+
+.dish-card.medium {
+    height: 290px;
+}
+
+.dish-card.small {
+    height: 250px;
+}
+
+.dish-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 20px;
+}
+
+.dish-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dish-overlay p {
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+/* Блок с текстом и кнопкой */
+.article-content {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.read-more-btn {
+    background-color: #d33;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.read-more-btn:hover {
+    background-color: #b22;
+}
+
+/* Подвал */
+footer {
+    background: #222;
+}
+
+.footer-logo {
+    height: 30px;
+    width: auto;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #d33;
+    text-decoration: none;
+}
+
+/* Адаптивность */
+@media (max-width: 991.98px) {
+    .dish-card.large {
+        height: 400px;
+    }
+    
+    .dish-card.medium {
+        height: 195px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 56px;
+    }
+    
+    .dish-card.large,
+    .dish-card.medium,
+    .dish-card.small {
+        height: 250px;
+    }
+    
+    .search-input {
+        width: 150px;
+    }
+    
+    .search-input:focus {
+        width: 180px;
+    }
+}
+
+/* Стили для страницы "О нас" */
+.about-img-rect {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-img-rect img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-img-square {
+    height: 0;
+    padding-bottom: 100%; /* Создает квадрат */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-img-square img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    color: #d33;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Стили для страницы рецептов */
+.recipe-card {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.recipe-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.recipe-content h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Стили для страницы ужина */
+.dinner-featured-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.dinner-featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.dinner-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.dinner-image img {
+    object-fit: cover;
+}
+
+.dinner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dinner-meta span {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tips-box {
+    border-left: 4px solid #d33;
+}
+
+/* Стили для страницы десертов */
+.dessert-featured {
+    position: relative;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dessert-featured img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dessert-featured-small {
+    position: relative;
+    height: 238px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dessert-featured-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dessert-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    padding: 30px;
+}
+
+.dessert-overlay h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dessert-overlay h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dessert-tips {
+    border-top: 4px solid #d33;
+}
+
+.tip-item h5 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Адаптивность для новых страниц */
+@media (max-width: 767.98px) {
+    .dinner-image {
+        height: 200px;
+    }
+    
+    .dessert-featured {
+        height: 300px;
+    }
+    
+    .dessert-featured-small {
+        height: 200px;
+    }
+    
+    .dessert-overlay h3 {
+        font-size: 1.5rem;
+    }
+    
+    .dessert-overlay h4 {
+        font-size: 1.2rem;
+    }
+}

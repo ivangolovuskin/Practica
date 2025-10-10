@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodciblog - Главная</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="bg-white py-3 sticky-top shadow-sm">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Логотип -->
+                <a href="index.html" class="text-decoration-none">
+                    <img src="img/logo.png" alt="Foodciblog" class="logo" id="logo">
+                </a>
+                
+                <!-- Основное меню -->
+                <nav class="d-none d-lg-block">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recipes.html">Рецепты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dinner.html">Ужин</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="desserts.html">Десерты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Поиск -->
+                <div class="search-box">
+                    <form class="d-flex">
+                        <input class="form-control me-2 search-input" type="search" placeholder="Поиск...">
+                        <button class="btn btn-outline-secondary search-btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Мобильное меню -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Мобильное меню (скрытое) -->
+            <div class="collapse mt-3" id="mobileMenu">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Рецепты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dinner.html">Ужин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desserts.html">Десерты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+<!-- Основной контент -->
+    <main class="container my-5">
+        <!-- Первый блок с 4 фото -->
+        <section class="featured-dishes mb-5">
+            <div class="row g-4">
+                <!-- Большое фото слева -->
+                <div class="col-lg-5">
+                    <div class="dish-card large">
+                        <img src="img/hero/hero-1.jpg" class="img-fluid" alt="Основное блюдо 1">
+                        <div class="dish-overlay">
+                            <h3></h3>
+                            <p>Веганский белый персиковый кружка с кардамономВеганский белый персиковый кружка с кардамоном</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <div class="row g-4 h-100">
+                        <!-- Два фото справа сверху и снизу -->
+                        <div class="col-lg-20">
+                            <div class="dish-card medium">
+                                <img src="img/hero/hero-2.jpg" class="img-fluid" alt="Основное блюдо 2">
+                                <div class="dish-overlay">
+                                    <h3></h3>
+                                    <p>Как приготовить молочный коктейль с любым
+                                        мороженым и любыми начинками...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-20">
+                            <div class="dish-card medium">
+                                <img src="img/hero/hero-3.jpg" class="img-fluid" alt="Основное блюдо 3">
+                                <div class="dish-overlay">
+                                    <h3></h3>
+                                    <p>Винтажная медная кастрюля для
+                                        Варенья с
+                                        латунными ручками, середина ХІХ
+                                        века</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Большое фото справа -->
+                <div class="col-lg-4">
+                    <div class="dish-card large">
+                        <img src="img/hero/hero-4.jpg" class="img-fluid" alt="Основное блюдо 4">
+                        <div class="dish-overlay">
+                            <h3></h3>
+                            <p>Салат из маринованной чечевицы с
+                                цуккини
+                                и помидорами</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Второй блок с 4 фото по центру -->
+        <section class="center-dishes mb-5">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="dish-card small">
+                        <img src="img/categories/cat-1.jpg" class="img-fluid" alt="Блюдо 1">
+                        <div class="dish-overlay">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="dish-card small">
+                        <img src="img/categories/cat-2.jpg" class="img-fluid" alt="Блюдо 2">
+                        <div class="dish-overlay">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="dish-card small">
+                        <img src="img/categories/cat-3.jpg" class="img-fluid" alt="Блюдо 3">
+                        <div class="dish-overlay">
+
+</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="dish-card small">
+                        <img src="img/categories/cat-4.jpg" class="img-fluid" alt="Блюдо 4">
+                        <div class="dish-overlay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Третий блок с большим фото и текстом -->
+        <section class="feature-article">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="dish-card large">
+                        <img src="img/categories/categories-post/cp-1.jpg" class="img-fluid" alt="Особое блюдо">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="article-content">
+                        <h2>ОБО МНЕ</h2>
+                        <div class="mt-4">
+                            <div class="dish-card small">
+                                <img src="img/humberger/humberger-about.jpg" class="img-fluid" alt="Дополнительное блюдо">
+                            </div>
+                        <p>Всем привет! Я Лена Моллейн.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Labore et dolore magna aliquam.</p>
+                        <a href="article.html" class="btn btn-primary read-more-btn">Читать дальше</a>
+                        
+                        <!-- Маленькое фото под текстом -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="bg-dark text-white py-4">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

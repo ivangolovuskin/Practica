@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodciblog - Ужин</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="bg-white py-3 sticky-top shadow-sm">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="text-decoration-none">
+                    <img src="img/logo.png" alt="Foodciblog" class="logo" id="logo">
+                </a>
+                
+                <nav class="d-none d-lg-block">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recipes.html">Рецепты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dinner.html">Ужин</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="desserts.html">Десерты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="search-box">
+                    <form class="d-flex">
+                        <input class="form-control me-2 search-input" type="search" placeholder="Поиск...">
+                        <button class="btn btn-outline-secondary search-btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="collapse mt-3" id="mobileMenu">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Рецепты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dinner.html">Ужин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desserts.html">Десерты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container my-5">
+        <h1 class="text-center mb-5">Идеи для ужина</h1>
+
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ужин</li>
+            </ol>
+        </nav>
+
+        <!-- Вводный блок -->
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <p class="lead">Откройте для себя лучшие рецепты для вечернего приёма пищи. От быстрых и простых блюд до изысканных кулинарных шедевров.</p>
+            </div>
+        </div>
+
+        <!-- Популярные рецепты для ужина -->
+        <section class="mb-5">
+            <h2 class="mb-4">Популярные блюда</h2>
+            <div class="row g-4">
+                <!-- Ужин 1 -->
+                <div class="col-lg-6">
+                    <div class="dinner-featured-card">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <div class="dinner-image">
+                                    <img src="img/dinner/dinner-1.jpg" class="img-fluid h-100 w-100" alt="Ужин 1">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="dinner-content p-4">
+                                    <h3 class="h4">Говядина по-строгановски</h3>
+                                    <p class="text-muted mb-3">Классическое русское блюдо с нежной говядиной в сливочном соусе</p>
+                                    <div class="dinner-meta mb-3">
+                                        <span><i class="fas fa-clock text-primary"></i> 45 мин</span>
+                                        <span class="ms-3"><i class="fas fa-users text-primary"></i> 4 порции</span>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">Смотреть рецепт</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ужин 2 -->
+                <div class="col-lg-6">
+                    <div class="dinner-featured-card">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <div class="dinner-image">
+                                    <img src="img/dinner/dinner-2.jpg" class="img-fluid h-100 w-100" alt="Ужин 2">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="dinner-content p-4">
+                                    <h3 class="h4">Креветки в чесночном масле</h3>
+                                    <p class="text-muted mb-3">Быстрое и изысканное блюдо из морепродуктов</p>
+                                    <div class="dinner-meta mb-3">
+                                        <span><i class="fas fa-clock text-primary"></i> 20 мин</span>
+                                        <span class="ms-3"><i class="fas fa-users text-primary"></i> 2 порции</span>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">Смотреть рецепт</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Быстрые рецепты -->
+        <section class="mb-5">
+            <h2 class="mb-4">Быстрые рецепты для ужина</h2>
+            <div class="row g-4">
+                <!-- Быстрый рецепт 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/dinner/quick-1.jpg" class="img-fluid" alt="Быстрый ужин 1">
+                            <div class="recipe-badge bg-success">
+                                <i class="fas fa-bolt"></i> 15 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <h3 class="h6">Омлет с овощами</h3>
+                            <p class="text-muted small">Питательный и быстрый вариант ужина</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary w-100">Приготовить</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Быстрый рецепт 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/dinner/quick-2.jpg" class="img-fluid" alt="Быстрый ужин 2">
+                            <div class="recipe-badge bg-success">
+                                <i class="fas fa-bolt"></i> 20 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <h3 class="h6">Курица терияки</h3>
+                            <p class="text-muted small">Азиатское блюдо с пикантным соусом</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary w-100">Приготовить</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Быстрый рецепт 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/dinner/quick-3.jpg" class="img-fluid" alt="Быстрый ужин 3">
+                            <div class="recipe-badge bg-success">
+                                <i class="fas fa-bolt"></i> 25 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <h3 class="h6">Паста песто</h3>
+                            <p class="text-muted small">Итальянская классика за полчаса</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary w-100">Приготовить</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Быстрый рецепт 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/dinner/quick-4.jpg" class="img-fluid" alt="Быстрый ужин 4">
+                            <div class="recipe-badge bg-success">
+                                <i class="fas fa-bolt"></i> 30 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <h3 class="h6">Рыбные котлеты</h3>
+                            <p class="text-muted small">Полезный ужин из морской рыбы</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary w-100">Приготовить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Изысканные рецепты -->
+        <section>
+            <h2 class="mb-4">Изысканные варианты</h2>
+            <div class="row g-4">
+                <!-- Изысканный рецепт 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/dinner/gourmet-1.jpg" class="img-fluid" alt="Изысканный ужин 1">
+                            <div class="recipe-badge bg-warning">
+                                <i class="fas fa-crown"></i> Премиум
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <h3 class="h5">Филе-миньон с трюфельным маслом</h3>
+                            <p class="text-muted">Ресторанное блюдо у вас дома</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted"><i class="fas fa-clock"></i> 60 мин</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Изысканный рецепт 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/dinner/gourmet-2.jpg" class="img-fluid" alt="Изысканный ужин 2">
+                            <div class="recipe-badge bg-warning">
+                                <i class="fas fa-crown"></i> Премиум
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <h3 class="h5">Утиная грудка с апельсиновым соусом</h3>
+                            <p class="text-muted">Французская кухня в лучших традициях</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted"><i class="fas fa-clock"></i> 50 мин</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Изысканный рецепт 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/dinner/gourmet-3.jpg" class="img-fluid" alt="Изысканный ужин 3">
+                            <div class="recipe-badge bg-warning">
+                                <i class="fas fa-crown"></i> Премиум
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <h3 class="h5">Омар с чесночным маслом</h3>
+                            <p class="text-muted">Деликатес для особого случая</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted"><i class="fas fa-clock"></i> 40 мин</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Советы по приготовлению ужина -->
+        <section class="mt-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="tips-box bg-light p-4 rounded">
+                        <h3 class="mb-4"><i class="fas fa-lightbulb text-warning"></i> Советы для идеального ужина</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Планируйте меню заранее для экономии времени</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Выбирайте сезонные продукты для лучшего вкуса</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Подготовьте ингредиенты перед началом готовки</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Не бойтесь экспериментировать со специями</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Сервируйте красиво - это часть удовольствия</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

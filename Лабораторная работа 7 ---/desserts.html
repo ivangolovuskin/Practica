@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodciblog - Десерты</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="bg-white py-3 sticky-top shadow-sm">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="text-decoration-none">
+                    <img src="img/logo.png" alt="Foodciblog" class="logo" id="logo">
+                </a>
+                
+                <nav class="d-none d-lg-block">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recipes.html">Рецепты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dinner.html">Ужин</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="desserts.html">Десерты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="search-box">
+                    <form class="d-flex">
+                        <input class="form-control me-2 search-input" type="search" placeholder="Поиск...">
+                        <button class="btn btn-outline-secondary search-btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="collapse mt-3" id="mobileMenu">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Рецепты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dinner.html">Ужин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="desserts.html">Десерты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container my-5">
+        <h1 class="text-center mb-5">Десерты</h1>
+
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Десерты</li>
+            </ol>
+        </nav>
+
+        <!-- Заголовок раздела -->
+        <div class="text-center mb-5">
+            <p class="lead">Сладкие искушения для любого случая. От простых домашних лакомств до изысканных кондитерских шедевров.</p>
+        </div>
+
+        <!-- Категории десертов -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+                    <button class="btn btn-outline-primary active">Все десерты</button>
+                    <button class="btn btn-outline-primary">Торты</button>
+                    <button class="btn btn-outline-primary">Печенье</button>
+                    <button class="btn btn-outline-primary">Мороженое</button>
+                    <button class="btn btn-outline-primary">Пироги</button>
+                    <button class="btn btn-outline-primary">Без выпечки</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Популярные десерты -->
+        <section class="mb-5">
+            <h2 class="mb-4">Популярные десерты</h2>
+            <div class="row g-4">
+                <!-- Большое фото слева -->
+                <div class="col-lg-6">
+                    <div class="dessert-featured">
+                        <img src="img/desserts/featured-1.jpg" class="img-fluid rounded" alt="Популярный десерт">
+                        <div class="dessert-overlay">
+                            <span class="badge bg-danger mb-2">Хит недели</span>
+                            <h3>Шоколадный фондан</h3>
+                            <p>Классический французский десерт с жидкой шоколадной начинкой</p>
+                            <a href="#" class="btn btn-light mt-2">Смотреть рецепт</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Два средних фото справа -->
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="dessert-featured-small">
+                                <img src="img/desserts/featured-2.jpg" class="img-fluid rounded" alt="Десерт 2">
+                                <div class="dessert-overlay">
+                                    <h4>Тирамису</h4>
+                                    <p>Нежный итальянский десерт с маскарпоне</p>
+                                    <a href="#" class="btn btn-light btn-sm">Рецепт</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="dessert-featured-small">
+                                <img src="img/desserts/featured-3.jpg" class="img-fluid rounded" alt="Десерт 3">
+                                <div class="dessert-overlay">
+                                    <h4>Чизкейк Нью-Йорк</h4>
+                                    <p>Классический американский десерт</p>
+                                    <a href="#" class="btn btn-light btn-sm">Рецепт</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сетка десертов -->
+        <section class="mb-5">
+            <h2 class="mb-4">Наша коллекция</h2>
+            <div class="row g-4">
+                <!-- Десерт 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/desserts/dessert-1.jpg" class="img-fluid" alt="Десерт 1">
+                            <div class="recipe-badge">
+                                <i class="fas fa-clock"></i> 40 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <span class="badge bg-info mb-2">Торты</span>
+                            <h3 class="h5">Наполеон</h3>
+                            <p class="text-muted">Многослойный торт с заварным кремом</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary"><i class="fas fa-heart"></i> 287</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Приготовить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десерт 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/desserts/dessert-2.jpg" class="img-fluid" alt="Десерт 2">
+                            <div class="recipe-badge">
+                                <i class="fas fa-clock"></i> 25 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <span class="badge bg-warning mb-2">Печенье</span>
+                            <h3 class="h5">Шоколадные маффины</h3>
+                            <p class="text-muted">Влажные и ароматные маффины с шоколадом</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary"><i class="fas fa-heart"></i> 195</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Приготовить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десерт 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/desserts/dessert-3.jpg" class="img-fluid" alt="Десерт 3">
+                            <div class="recipe-badge">
+                                <i class="fas fa-clock"></i> 10 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <span class="badge bg-success mb-2">Без выпечки</span>
+                            <h3 class="h5">Панна-котта</h3>
+                            <p class="text-muted">Итальянский десерт на основе сливок</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary"><i class="fas fa-heart"></i> 342</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Приготовить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десерт 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/desserts/dessert-4.jpg" class="img-fluid" alt="Десерт 4">
+                            <div class="recipe-badge">
+                                <i class="fas fa-clock"></i> 50 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <span class="badge bg-info mb-2">Пироги</span>
+                            <h3 class="h5">Яблочный штрудель</h3>
+                            <p class="text-muted">Австрийский десерт с яблоками и корицей</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary"><i class="fas fa-heart"></i> 218</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Приготовить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десерт 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/desserts/dessert-5.jpg" class="img-fluid" alt="Десерт 5">
+                            <div class="recipe-badge">
+                                <i class="fas fa-clock"></i> 15 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <span class="badge bg-danger mb-2">Мороженое</span>
+                            <h3 class="h5">Домашнее мороженое</h3>
+                            <p class="text-muted">Натуральное мороженое без добавок</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary"><i class="fas fa-heart"></i> 412</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Приготовить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десерт 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/desserts/dessert-6.jpg" class="img-fluid" alt="Десерт 6">
+                            <div class="recipe-badge">
+                                <i class="fas fa-clock"></i> 30 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <span class="badge bg-warning mb-2">Печенье</span>
+                            <h3 class="h5">Макарон</h3>
+                            <p class="text-muted">Французское миндальное печенье</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary"><i class="fas fa-heart"></i> 367</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Приготовить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десерт 7 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/desserts/dessert-7.jpg" class="img-fluid" alt="Десерт 7">
+                            <div class="recipe-badge">
+                                <i class="fas fa-clock"></i> 60 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <span class="badge bg-info mb-2">Торты</span>
+                            <h3 class="h5">Медовик</h3>
+                            <p class="text-muted">Традиционный русский медовый торт</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary"><i class="fas fa-heart"></i> 523</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Приготовить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десерт 8 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/desserts/dessert-8.jpg" class="img-fluid" alt="Десерт 8">
+                            <div class="recipe-badge">
+                                <i class="fas fa-clock"></i> 20 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <span class="badge bg-success mb-2">Без выпечки</span>
+                            <h3 class="h5">Трюфели</h3>
+                            <p class="text-muted">Шоколадные конфеты ручной работы</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary"><i class="fas fa-heart"></i> 298</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Приготовить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десерт 9 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="img/desserts/dessert-9.jpg" class="img-fluid" alt="Десерт 9">
+                            <div class="recipe-badge">
+                                <i class="fas fa-clock"></i> 45 мин
+                            </div>
+                        </div>
+                        <div class="recipe-content p-3">
+                            <span class="badge bg-info mb-2">Пироги</span>
+                            <h3 class="h5">Лимонный тарт</h3>
+                            <p class="text-muted">Французский тарт с лимонным курдом</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary"><i class="fas fa-heart"></i> 276</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Приготовить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Советы по приготовлению -->
+        <section class="mt-5">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="dessert-tips bg-light p-5 rounded">
+                        <h3 class="mb-4 text-center"><i class="fas fa-cookie-bite text-primary"></i> Секреты идеальных десертов</h3>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="tip-item">
+                                    <h5><i class="fas fa-check-circle text-success me-2"></i>Точность важна</h5>
+                                    <p class="text-muted">При выпечке следуйте рецепту точно - кондитерское искусство требует точных пропорций</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tip-item">
+                                    <h5><i class="fas fa-check-circle text-success me-2"></i>Качественные ингредиенты</h5>
+                                    <p class="text-muted">Используйте свежие и качественные продукты для лучшего вкуса</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tip-item">
+                                    <h5><i class="fas fa-check-circle text-success me-2"></i>Температура</h5>
+                                    <p class="text-muted">Соблюдайте температурный режим при выпечке и хранении</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tip-item">
+                                    <h5><i class="fas fa-check-circle text-success me-2"></i>Украшение</h5>
+                                    <p class="text-muted">Красивая подача делает десерт ещё вкуснее</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
