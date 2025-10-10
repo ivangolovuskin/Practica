@@ -1,0 +1,712 @@
+body {
+    font-family: 'Poiret One', sans-serif; 
+    color: #333;
+    background-color: #EFF7F6;
+    font-size: 1.05rem; 
+    line-height: 1.6; 
+}
+
+.product-price,
+.cart-item-new-price,
+#cartItemsSubtotal,
+#footerCartSubtotal,
+#footerDeliveryCost,
+#footerCartTotalAmount,
+.cart-item-new-quantity .quantity-text,
+.cart-badge,
+.delivery-phone-contact a { 
+    font-family: 'Oswald', sans-serif;
+}
+
+.site-header {
+    background-color: #E9FFFD;
+    border-bottom: 1px solid #e0e7ef;
+}
+
+.main-page-indicator {
+    font-size: 1.2rem; 
+    color: #555;
+    font-weight: 500;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 45px;
+    width: auto;
+    margin-right: 10px; 
+}
+
+.logo-text {
+    font-size: 2rem; 
+    font-weight: bold;
+    color: #555454;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    height: 30px;
+    width: auto;
+    margin-right: 10px; 
+}
+
+.cart-badge {
+    font-size: 0.7em; 
+    padding: 0.3em 0.45em; 
+}
+
+.hero-section .hero-title,
+.hero-section .hero-subtitle,
+.hero-section .btn-to-catalog {
+    font-family: 'Jost', sans-serif; 
+}
+.hero-title {
+    font-size: 2.8rem; 
+    font-weight: 700;
+    margin-bottom: 0.75rem; 
+}
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400; 
+    margin-bottom: 2rem; 
+}
+.btn-to-catalog {
+    background-color: #fff;
+    color: #EFB8C8;
+    border: 1px solid #EFB8C8;
+    padding: 0.75rem 2rem; 
+    font-size: 1.1rem; 
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-to-catalog:hover {
+    background-color: #fdeaf1;
+    color: #EFB8C8;
+    border-color: #EFB8C8;
+}
+
+.catalog-controls {
+    background-color: transparent;
+    padding-top: 0.75rem; 
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08); 
+    box-shadow: none; 
+}
+
+.catalog-controls .form-control,
+.catalog-controls .form-select {
+    font-size: 1rem; 
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+
+}
+.catalog-controls .form-control::placeholder {
+    color: #999;
+}
+
+
+.catalog-controls .input-group .form-control {
+    border-right: none;
+}
+.catalog-controls .input-group .form-control:focus {
+    z-index: 3;
+    border-color: #EFB8C8;
+    box-shadow: 0 0 0 0.2rem rgba(239, 184, 200, 0.25);
+}
+
+.catalog-controls .input-group .btn { 
+    border-left: none;
+    background-color: #fff; 
+    border-color: #ced4da;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.catalog-controls .input-group .btn:hover {
+    background-color: #e9ecef;
+}
+.catalog-controls .input-group .btn i {
+    color: #6c757d;
+    font-size: 1.1rem; 
+}
+
+.catalog-controls .form-select {
+    background-position: right 0.75rem center;
+}
+.catalog-controls .form-select:focus {
+    border-color: #EFB8C8;
+    box-shadow: 0 0 0 0.2rem rgba(239, 184, 200, 0.25);
+}
+
+.product-name {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 1.1rem; 
+    color: #333;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    min-height: 44px; 
+    line-height: 1.3; 
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: bold; 
+    color: #484848;
+    margin-bottom: 0.75rem;
+}
+
+.footer-icon {
+    font-family: 'Font Awesome 6 Free'; 
+}
+.social-icons .social-icon-link i {
+    font-family: 'Font Awesome 6 Brands'; 
+}
+.categories-filter .category-filter-btn {
+    border-color: #EFB8C8;
+    color: #EFB8C8;
+    padding: 0.6rem 1.2rem; 
+    font-weight: 500;
+    font-size: 1rem; 
+    transition: all 0.3s ease;
+}
+
+.categories-filter .category-filter-btn:hover,
+.categories-filter .category-filter-btn.active {
+    background-color: #EFB8C8;
+    color: #fff;
+}
+
+.product-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #fff;
+    overflow: hidden;
+}
+.product-item a {
+    display: block;
+    height: 100%;
+}
+
+.product-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+}
+
+.product-image {
+    aspect-ratio: 3 / 3.5;
+    object-fit: cover;
+    width: 100%;
+}
+
+.btn-add-to-cart {
+    background-color: #FADADD;
+    color: #444;
+    border: none;
+    padding: 0.6rem 1.2rem; 
+    font-size: 1rem; 
+    font-weight: 500;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #f7c5d2;
+    color: #333;
+}
+
+.site-footer-main {
+    background-color: #E9FFFD;
+    color: #444;
+    font-size: 1rem;
+}
+
+.footer-title {
+    font-size: 1.4rem; 
+    font-weight: 500;
+    color: #333;
+}
+
+.footer-icon {
+    color: #EFB8C8;
+    font-size: 1.1rem;
+}
+
+.footer-contact-title {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: #333;
+    font-size: 1.05rem; 
+}
+
+.footer-link {
+    color: #555;
+    font-size: 1rem; 
+}
+.footer-link:hover {
+    color: #EFB8C8;
+}
+
+.social-icons .social-icon-link {
+    display: inline-block;
+    margin: 0 0.4rem;
+    color: #fff;
+    background-color: #FADADD;
+    width: 40px; 
+    height: 40px; 
+    line-height: 40px; 
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.1rem; 
+    transition: background-color 0.3s ease;
+}
+
+.social-icons .social-icon-link:hover {
+    background-color: #f7c5d2;
+}
+
+.footer-small-logo {
+    height: 24px;
+    width: auto;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.copyright .text-muted {
+    font-size: 0.9rem; 
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+.modal-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1.2rem 1.75rem; 
+}
+.modal-title {
+    font-weight: 500;
+    font-size: 1.4rem; 
+    color: #4A4A4A;
+}
+.modal-header .btn-close {
+     background: none;
+     opacity: 1;
+}
+.modal-header .btn-close::before {
+    content: '\00D7';
+    font-size: 2rem; 
+    color: #EFB8C8;
+    font-weight: bold;
+    line-height: 1;
+}
+
+
+#cartItemsContainer .cart-item-new {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0; 
+    border-bottom: 1px solid #eaeaea;
+}
+#cartItemsContainer .cart-item-new:last-child {
+    border-bottom: none;
+}
+
+.cart-item-new-image {
+    width: 70px; 
+    height: 70px; 
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1.2rem;
+}
+
+.cart-item-new-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0.75rem; 
+}
+
+.cart-item-new-name {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.4rem; 
+    line-height: 1.3; 
+}
+
+.cart-item-new-quantity {
+    display: flex;
+    align-items: center;
+}
+.cart-item-new-quantity .btn {
+    padding: 0.15rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    background-color: transparent;
+    border: 1px solid #EFB8C8;
+    color: #EFB8C8;
+    border-radius: 50%;
+    width: 28px; 
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-item-new-quantity .btn:hover {
+    background-color: #fdeaf1;
+}
+.cart-item-new-quantity .quantity-text {
+    min-width: 30px; 
+    text-align: center;
+    font-weight: 500; 
+    font-size: 1rem; 
+    color: #333;
+    margin: 0 0.6rem; 
+}
+
+.cart-item-new-price {
+    font-size: 1.05rem; 
+    font-weight: 500; 
+    color: #333;
+    min-width: 80px; 
+    text-align: right;
+    margin-left: auto;
+    margin-right: 1rem; 
+}
+
+.btn-remove-item-new {
+    color: #EFB8C8;
+    background: none;
+    border: none;
+    font-size: 1.5rem; 
+    padding: 0 0.3rem;
+    line-height: 1;
+}
+.btn-remove-item-new:hover {
+    color: #EFB8C8;
+}
+
+.cart-subtotal-info {
+    font-size: 1rem; 
+    color: #555;
+}
+.cart-subtotal-info span {
+    font-weight: 500; 
+    color: #333;
+}
+
+#checkoutForm .form-label {
+    font-size: 0.95rem; 
+    font-weight: 500;
+    color: #555759;
+    margin-bottom: 0.4rem;
+}
+
+#checkoutForm .form-control,
+#checkoutForm .form-select,
+#checkoutForm textarea.form-control {
+    font-size: 1rem; 
+    border-radius: 4px;
+    border: 1px solid #D9DADB;
+    background-color: #F7F7F7;
+    padding: 0.5rem 0.85rem; 
+}
+#checkoutForm .form-control:focus,
+#checkoutForm textarea.form-control:focus {
+    border-color: #EFB8C8;
+    box-shadow: 0 0 0 0.15rem rgba(231, 84, 128, 0.2);
+    background-color: #fff;
+}
+
+#checkoutForm .form-check-label {
+    font-size: 1rem; 
+    color: #555759;
+}
+#checkoutForm .form-check-input {
+    border-color: #B9BABE;
+}
+#checkoutForm .form-check-input:checked {
+    background-color: #EFB8C8;
+    border-color: #EFB8C8;
+}
+#checkoutForm .form-check-input:focus {
+    box-shadow: 0 0 0 0.15rem rgba(231, 84, 128, 0.2);
+}
+
+.modal-footer {
+    background-color: #F7F7F7;
+    border-top: 1px solid #eee;
+    padding: 1.2rem 1.75rem; 
+}
+.modal-footer#cartTotalsBlock p,
+.modal-footer#cartTotalsBlock h5 {
+    font-size: 1rem; 
+    margin-bottom: 0.4rem !important;
+    color: #555759;
+}
+.modal-footer#cartTotalsBlock span, 
+.modal-footer#cartTotalsBlock h5 span { 
+    font-weight: 500; 
+    color: #333;
+}
+.modal-footer#cartTotalsBlock h5 {
+    font-size: 1.15rem; 
+    font-weight: 500;
+    color: #333;
+}
+.modal-footer#cartTotalsBlock h5 span { 
+    font-weight: bold; 
+}
+
+
+.btn-checkout-new {
+    background-color: #EFB8C8;
+    color: #fff;
+    padding: 0.8rem 1.7rem; 
+    font-size: 1.05rem; 
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+.btn-checkout-new:hover {
+    background-color: #d1426f;
+    color: #fff;
+}
+.btn-checkout-new:disabled {
+    background-color: #f3a1b9;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+.modal-footer .btn-outline-secondary {
+    font-size: 1.05rem;
+    padding: 0.8rem 1.7rem; 
+    border-color: #D9DADB;
+    color: #555759;
+}
+.modal-footer .btn-outline-secondary:hover {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: #333;
+}
+
+
+.empty-cart-message {
+    padding: 2.5rem 0; 
+    font-size: 1.1rem; 
+}
+
+
+.delivery-info-modal-content {
+    background-color: #F7F7F7;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+}
+
+.delivery-info-modal-header {
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 1.2rem 1.75rem; 
+    align-items: center;
+}
+
+.delivery-info-modal-title {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: #4A4A4A;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.delivery-info-circle {
+    display: inline-block;
+    width: 16px; 
+    height: 16px;
+    border: 2px solid #4A4A4A;
+    border-radius: 50%;
+    margin-right: 0.6rem; 
+}
+
+.delivery-info-btn-close {
+    background: none;
+    border: none;
+    opacity: 1;
+    font-size: 2rem;
+    color: #EFB8C8;
+    font-weight: bold;
+    padding: 0.6rem;
+    position: absolute;
+    top: 0.9rem; 
+    right: 1.2rem; 
+}
+.delivery-info-btn-close::before {
+    content: '\00D7';
+}
+
+.delivery-info-modal-body {
+    padding: 1.75rem;
+    color: #5F5F5F;
+    font-size: 1rem; 
+    line-height: 1.7; 
+}
+
+.delivery-truck-icon {
+    width: 90px; 
+    height: auto;
+    filter: grayscale(30%) opacity(0.8);
+}
+
+.delivery-section-title {
+    font-weight: normal;
+    color: #4A4A4A;
+    font-size: 1.1rem; 
+    margin-bottom: 0.85rem; 
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 0.6rem; 
+    display: inline-block;
+}
+.delivery-info-modal-body .text-center .delivery-section-title {
+    display: block;
+}
+
+
+.delivery-info-modal-body p {
+    line-height: 1.7; 
+    margin-bottom: 0.85rem; 
+}
+
+.delivery-info-modal-body .small.text-muted {
+    font-size: 0.85rem; 
+    color: #777 !important;
+}
+
+.phone-icon {
+    width: 34px; 
+    height: auto;
+    vertical-align: middle;
+    filter: grayscale(30%) opacity(0.8);
+}
+
+.delivery-phone-contact {
+    margin-top: 1.2rem;
+}
+.delivery-phone-contact a {
+    color: #EFB8C8 !important;
+    font-weight: 500 !important; 
+    font-size: 1.2rem; 
+}
+
+@media (max-width: 767.98px) {
+    body {
+        font-size: 1rem; 
+    }
+    .main-page-indicator {
+        display: none;
+    }
+    .logo-text {
+        font-size: 1.7rem; 
+    }
+    .hero-title {
+        font-size: 2.2rem; 
+    }
+    .hero-subtitle {
+        font-size: 1.15rem; 
+    }
+    .btn-to-catalog {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+    .catalog-controls .form-control,
+    .catalog-controls .form-select {
+        font-size: 0.95rem; 
+    }
+    .product-name {
+        font-size: 1rem; 
+        min-height: 40px;
+    }
+    .product-price {
+        font-size: 1.15rem;
+    }
+    .categories-filter .category-filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .categories-filter .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .category-buttons {
+      justify-content: flex-start !important;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 0.5rem;
+    }
+
+    .footer-contact-block {
+        margin-bottom: 1.5rem !important;
+    }
+    .modal-title {
+        font-size: 1.25rem;
+    }
+    #cartItemsContainer .cart-item-new-name { font-size: 0.95rem; }
+    #cartItemsContainer .cart-item-new-price { font-size: 1rem; }
+    #checkoutForm .form-label { font-size: 0.9rem; }
+    #checkoutForm .form-control, #checkoutForm .form-select { font-size: 0.95rem; }
+    .modal-footer#cartTotalsBlock p, .modal-footer#cartTotalsBlock h5 { font-size: 0.95rem; }
+    .modal-footer#cartTotalsBlock h5 { font-size: 1.05rem; }
+
+
+    .delivery-info-modal-title { font-size: 1.15rem; }
+    .delivery-info-modal-body { font-size: 0.95rem; }
+    
+}
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 1.9rem; 
+    }
+    .hero-subtitle {
+        font-size: 1.05rem; 
+    }
+    .logo-text {
+        font-size: 1.5rem; 
+    }
+
+    .delivery-info-modal-title {
+        font-size: 1.05rem; 
+    }
+    .delivery-info-btn-close {
+        font-size: 1.7rem; 
+        top: 0.6rem;
+        right: 0.85rem;
+    }
+    .delivery-info-modal-body {
+        padding: 1.2rem; 
+        font-size: 0.9rem; 
+    }
+    .delivery-truck-icon {
+        width: 70px; 
+    }
+    .phone-icon {
+        width: 28px;
+    }
+    .delivery-phone-contact a {
+        font-size: 1.1rem; 
+    }
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florin - Доставка цветов в Красноярске</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Jost:wght@400;500;700&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header py-2">
+    <div class="container d-flex justify-content-between align-items-center position-relative">
+        <a href="index.html" class="logo-link text-decoration-none mx-auto">
+            <img src="img/icon/logo.png" alt="Florin Logo" class="logo-image">
+            <span class="logo-text">Florin</span>
+        </a>
+        <div class="header-actions">
+            <a href="#" class="text-dark me-3" aria-label="Информация о доставке" data-bs-toggle="modal" data-bs-target="#deliveryInfoModal">
+                <img src="img/icon/delivery grey.png" alt="Доставка" class="header-icon">
+            </a>
+            <a href="#" class="text-dark position-relative" aria-label="Корзина" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <img src="img/icon/shoppingcart.png" alt="Корзина" class="header-icon">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+                    0
+                    <span class="visually-hidden">товаров в корзине</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</header>
+    <section class="hero-section text-center text-white">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/photo/main/all/1main.jpeg');">
+                    <div class="hero-content d-flex flex-column align-items-center justify-content-center">
+                        <h1 class="hero-title">Доставка цветов в Красноярске</h1>
+                        <p class="hero-subtitle">Бесплатная доставка при заказе от 3500р*</p>
+                        <a href="#catalog" class="btn btn-light btn-to-catalog">В каталог</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/photo/main/all/2main.jpeg');">
+                     <div class="hero-content d-flex flex-column align-items-center justify-content-center">
+                        <h1 class="hero-title">Свежие букеты каждый день</h1>
+                        <p class="hero-subtitle">Удивите своих близких </p>
+                        <a href="#catalog" class="btn btn-light btn-to-catalog">Выбрать букет</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/photo/main/all/3main.jpeg');">
+                     <div class="hero-content d-flex flex-column align-items-center justify-content-center">
+                        <h1 class="hero-title">Особые предложения</h1>
+                        <p class="hero-subtitle">Самые невероятные букеты</p>
+                        <a href="#catalog" class="btn btn-light btn-to-catalog">Смотреть товары</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section class="catalog-controls py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-7 mb-2 mb-md-0">
+                    <div class="input-group">
+                        <input type="search" id="searchInput" class="form-control" placeholder="Поиск по каталогу...">
+                        <button class="btn btn-outline-secondary" type="button" id="searchButton"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <select class="form-select" id="sortOrder">
+                        <option value="default" selected>Порядок: по умолчанию</option>
+                        <option value="price_asc">Цена: по возрастанию</option>
+                        <option value="price_desc">Цена: по убыванию</option>
+                        <option value="name_asc">Название: А-Я</option>
+                        <option value="name_desc">Название: Я-А</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="categories-filter py-3">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-2 category-buttons">
+                <button class="btn btn-outline-primary category-filter-btn active" data-filter="all">Все</button>
+                <button class="btn btn-outline-primary category-filter-btn" data-filter="monobuket">Монобукеты</button>
+                <button class="btn btn-outline-primary category-filter-btn" data-filter="roses">Букеты из роз</button>
+                <button class="btn btn-outline-primary category-filter-btn" data-filter="giants">Букеты-гиганты</button>
+            </div>
+        </div>
+    </section>
+    <main id="catalog" class="container py-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 product-grid">
+            <div class="col product-item" data-category="monobuket">
+                <a href="product-detail-1.html" class="text-decoration-none">
+                    <div class="card product-card h-100 text-center">
+                        <img src="img/photo/main/mono/1.png" class="card-img-top product-image" alt="Монобукет 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title product-name">Клубничный сорбет</h5>
+                            <p class="product-price">3500 р.</p>
+                            <button class="btn btn-add-to-cart mt-auto" data-id="prod-mono-1" data-name="Шикарный монобукет из роз" data-price="3500" data-image="img/photo/main/mono/1.png">в корзину</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col product-item" data-category="monobuket"><a href="img/photo/main/mono/1.png" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/mono/2.png" class="card-img-top product-image" alt="Монобукет 1"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Кейк-поп</h5><p class="product-price">2800 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="m1" data-name="Монобукет Альстромерий" data-price="2800" data-image="img/photo/main/mono/2.png">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="monobuket"><a href="product-detail-mono2.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/mono/3.png" class="card-img-top product-image" alt="Монобукет 2"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Небесное вдохновение</h5><p class="product-price">3200 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="m2" data-name="Монобукет Тюльпанов" data-price="3200" data-image="img/photo/main/mono/3.png">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="monobuket"><a href="product-detail-mono3.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/mono/4.png" class="card-img-top product-image" alt="Монобукет 3"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Ягодный смузи</h5><p class="product-price">2500 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="m3" data-name="Монобукет Хризантем" data-price="2500" data-image="img/photo/main/mono/4.png">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="monobuket"><a href="product-detail-mono4.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/mono/5.png" class="card-img-top product-image" alt="Монобукет 4"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Милый зайчик</h5><p class="product-price">3100 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="m4" data-name="Монобукет Эустом" data-price="3100" data-image="img/photo/main/mono/5.png">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="monobuket"><a href="product-detail-mono5.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/mono/6.png" class="card-img-top product-image" alt="Монобукет 5"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Клубника в сливках</h5><p class="product-price">2200 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="m5" data-name="Монобукет Гвоздик" data-price="2200" data-image="img/photo/main/mono/6.png">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="roses"><a href="product-detail-rose1.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/rosa/1.png" class="card-img-top product-image" alt="Розы 1"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Поцелуй</h5><p class="product-price">3800 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="r1" data-name="Букет Алая страсть" data-price="3800" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="roses"><a href="product-detail-rose2.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/rosa/2.png" class="card-img-top product-image" alt="Розы 2"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Sweet for love</h5><p class="product-price">4200 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="r2" data-name="Букет Нежность роз" data-price="4200" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="roses"><a href="product-detail-rose3.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/rosa/3.png" class="card-img-top product-image" alt="Розы 3"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Зайка</h5><p class="product-price">3950 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="r3" data-name="Букет Белоснежка" data-price="3950" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="giants"><a href="product-detail-giant1.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/giant/1.png" class="card-img-top product-image" alt="Гигант 1"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Ясное небо</h5><p class="product-price">15000 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="g1" data-name="Гигант 101 роза" data-price="15000" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="giants"><a href="product-detail-giant2.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/giant/2.png" class="card-img-top product-image" alt="Гигант 2"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Магия цветов</h5><p class="product-price">12500 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="g2" data-name="Гигант Цветочное Облако" data-price="12500" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="giants"><a href="product-detail-giant3.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/giant/3.png" class="card-img-top product-image" alt="Гигант 3"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Карамель</h5><p class="product-price">10000 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="g3" data-name="Гигант Мега Микс" data-price="10000" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="monobuket"><a href="product-detail-all1.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/mono/7.png" class="card-img-top product-image" alt="Все 1 (Моно)"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Мятные оливки</h5><p class="product-price">2600 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="all1" data-name="Монобукет Солнце" data-price="2600" data-image="img/photo/main/mono/7.png">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="monobuket"><a href="product-detail-all2.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/mono/8.png" class="card-img-top product-image" alt="Все 2 (Моно)"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Джелатто</h5><p class="product-price">3000 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="all2" data-name="Монобукет Нежность" data-price="3000" data-image="img/photo/main/mono/8.png">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="monobuket"><a href="product-detail-all3.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/mono/9.png" class="card-img-top product-image" alt="Все 3 (Моно)"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Крем</h5><p class="product-price">3400 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="all3" data-name="Монобукет Страсть" data-price="3400" data-image="img/photo/main/mono/9.png">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="roses"><a href="product-detail-all4.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/rosa/4.png" class="card-img-top product-image" alt="Все 4 (Розы)"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Милый голос</h5><p class="product-price">3750 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="all4" data-name="Букет роз Улыбка" data-price="3750" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="roses"><a href="product-detail-all5.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/rosa/5.png" class="card-img-top product-image" alt="Все 5 (Розы)"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Мороженное в парке</h5><p class="product-price">4150 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="all5" data-name="Букет роз Очарование" data-price="4150" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="roses"><a href="product-detail-all6.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/rosa/6.png" class="card-img-top product-image" alt="Все 6 (Розы)"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Франзузская роза</h5><p class="product-price">4900 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="all6" data-name="Букет роз Грация" data-price="4900" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="giants"><a href="product-detail-all7.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/giant/4.png" class="card-img-top product-image" alt="Все 7 (Гигант)"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Ромашковое поле</h5><p class="product-price">7500 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="all7" data-name="Мини-гигант Сюрприз" data-price="7500" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="giants"><a href="product-detail-all8.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/giant/5.png" class="card-img-top product-image" alt="Все 8 (Гигант)"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Роскошь</h5><p class="product-price">11000 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="all8" data-name="Средний гигант Впечатление" data-price="11000" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+            <div class="col product-item" data-category="giants"><a href="product-detail-all9.html" class="text-decoration-none"><div class="card product-card h-100 text-center"><img src="img/photo/main/giant/6.png" class="card-img-top product-image" alt="Все 9 (Гигант)"><div class="card-body d-flex flex-column"><h5 class="card-title product-name">Прикосновение нежности</h5><p class="product-price">13500 р.</p><button class="btn btn-add-to-cart mt-auto" data-id="all9" data-name="Большой гигант Феерия" data-price="13500" data-image="./images/placeholder-product-thumb.jpg">в корзину</button></div></div></a></div>
+
+        </div>
+    </main>
+    <footer class="site-footer-main text-center py-5">
+        <div class="container">
+            <h4 class="footer-title mb-4">Студия флористики Florin</h4>
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0 footer-contact-block">
+                    <i class="fas fa-phone-alt fa-2x footer-icon mb-2"></i>
+                    <p class="footer-contact-title">Телефон</p>
+                    <a href="tel:+78005553535" class="d-block text-decoration-none footer-link">+8(800)-5553535</a>
+                    <a href="tel:+75080533565" class="d-block text-decoration-none footer-link">+8(508)-0533565</a>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0 footer-contact-block">
+                    <i class="fas fa-envelope fa-2x footer-icon mb-2"></i>
+                    <p class="footer-contact-title">Email</p>
+                    <a href="mailto:florinlove@gmail.com" class="text-decoration-none footer-link">florinlove@gmail.com</a>
+                </div>
+                <div class="col-md-4 footer-contact-block">
+                    <i class="fas fa-comments fa-2x footer-icon mb-2"></i>
+                    <p class="footer-contact-title">Наши социальные сети</p>
+                    <div class="social-icons">
+                        <a href="img/icon/tg.png" class="social-icon-link"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="img/icon/vk.png" class="social-icon-link"><i class="fab fa-vk"></i></a>
+                        <a href="img/icon/ok.png" class="social-icon-link"><i class="fab fa-odnoklassniki"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright mt-5">
+                <img src="img/icon/logo.png" alt="Florin small logo" class="footer-small-logo">
+                <span class="text-muted">All Rights Reserved</span>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Корзина:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="cartModalBody">
+                    <div id="cartItemsContainer">
+                        <p class="text-center text-muted empty-cart-message">Ваша корзина пуста.</p>
+                    </div>
+                    <hr class="my-3 cart-form-separator" style="display: none;">
+                    <div class="cart-subtotal-info text-end mb-3" style="display: none;">
+                        Сумма: <span id="cartItemsSubtotal">0</span> р.
+                    </div>
+
+                    <form id="checkoutForm" style="display: none;">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="customerName" class="form-label">Ваше имя</label>
+                                <input type="text" class="form-control form-control-sm" id="customerName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="customerPhone" class="form-label">Ваш номер телефона</label>
+                                <input type="tel" class="form-control form-control-sm" id="customerPhone" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Получатель</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recipientType" id="recipientSelf" value="self" checked>
+                                <label class="form-check-label" for="recipientSelf">Я</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recipientType" id="recipientOther" value="other">
+                                <label class="form-check-label" for="recipientOther">Другой человек</label>
+                            </div>
+                        </div>
+                        <p class="small text-muted mb-3">Если ваш заказ более 3500 руб., привезём его бесплатно*</p>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="deliveryDate" class="form-label">Дата доставки</label>
+                                <input type="date" class="form-control form-control-sm" id="deliveryDate">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="deliveryTime" class="form-label">Время</label>
+                                <input type="time" class="form-control form-control-sm" id="deliveryTime">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="deliveryAddress" class="form-label">Адрес доставки</label>
+                            <textarea class="form-control form-control-sm" id="deliveryAddress" rows="2"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="deliveryComment" class="form-label">Комментарий к доставке</label>
+                            <textarea class="form-control form-control-sm" id="deliveryComment" rows="2"></textarea>
+                        </div>
+
+                        <div>
+                            <label class="form-label">Способ оплаты</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentOnline" value="online" checked>
+                                <label class="form-check-label" for="paymentOnline">Онлайн оплата на сайте</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentCash" value="cash">
+                                <label class="form-check-label" for="paymentCash">Наличными при получении</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer flex-column align-items-stretch">
+                    <div id="cartTotalsBlock" class="w-100 mb-2 text-end" style="display: none;">
+                        <p class="mb-1">Сумма: <span id="footerCartSubtotal">0</span> р.</p>
+                        <p class="mb-1">Доставка по городу: <span id="footerDeliveryCost">0</span> р.</p>
+                        <h5 class="mb-2">Итоговая сумма: <span id="footerCartTotalAmount">0</span> р.</h5>
+                    </div>
+                    <button type="button" class="btn btn-checkout-new w-100" id="checkoutBtnNew" disabled>Оформить заказ</button>
+                    <button type="button" class="btn btn-outline-secondary w-100 mt-2" data-bs-dismiss="modal">Продолжить покупки</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deliveryInfoModal" tabindex="-1" aria-labelledby="deliveryInfoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content delivery-info-modal-content">
+                <div class="modal-header delivery-info-modal-header">
+                    <h5 class="modal-title delivery-info-modal-title" id="deliveryInfoModalLabel">
+                        </span> О ДОСТАВКЕ
+                    </h5>
+                    <button type="button" class="btn-close delivery-info-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body delivery-info-modal-body">
+                    <div class="text-center mb-4">
+                        <img src="img/icon/delivery.png" alt="Иконка доставки" class="delivery-truck-icon mb-2">
+                        <h6 class="delivery-section-title">Стоимость доставки</h6>
+                        <p>Стоимость доставки по Красноярску - 300 рублей. (за исключением периода значительных пробок на дорогах города)</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h6 class="delivery-section-title text-center">Бесплатная доставка</h6>
+                        <p>Акция "Бесплатная доставка" распространяется на заказы от 3500 рублей и выше.</p>
+                        <p class="small text-muted">Не является публичной офертой. Акция действует до её отмены и не суммируется с другими акциями, скидками и иными специальными предложениями.</p>
+                        <p class="small text-muted">Стоимость доставки может измениться в час-пик, праздничные и предпраздничные даты, а также в часы значительной загруженности на дорогах.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h6 class="delivery-section-title">Как узнать подробности о сделанном заказе?</h6>
+                        <p>После того как вы совершили заказ, информацию о статусе его доставки можно узнать по следующему номеру телефона:</p>
+                        <p class="delivery-phone-contact">
+                            <img src="img/icon/phone.png" alt="Иконка телефона" class="phone-icon me-2">
+                            <a href="tel:+78005553535" class="text-decoration-none text-dark fw-bold fs-5">+8(800)-5553535</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
